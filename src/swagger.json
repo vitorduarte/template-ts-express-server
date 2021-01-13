@@ -1,0 +1,40 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Swagger Template ",
+    "version": "1.0.0",
+    "description": "Server Template"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3321/"
+    }
+  ],
+  "tags": [],
+  "paths": {
+    "/test": {
+      "get": {
+        "tags": [""],
+        "summary": "Test endpoint",
+        "operationId": "test",
+        "parameters": [],
+        "security": [],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    },
+    "schemas": {}
+  }
+}

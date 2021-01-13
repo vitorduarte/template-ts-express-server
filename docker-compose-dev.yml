@@ -1,0 +1,19 @@
+version: '3'
+
+networks:
+  test-network:
+    driver: bridge
+
+services:
+  express-server:
+    build: .
+    command: npm run dev
+    container_name: express-server
+    ports:
+      - '3321:3321'
+    volumes:
+      - ./:/express-server
+      - /express-server/node_modules
+    networks:
+      - test-network
+    working_dir: /express-server
